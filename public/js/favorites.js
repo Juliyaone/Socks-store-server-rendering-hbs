@@ -1,5 +1,4 @@
 const btns = document.querySelectorAll('.copy-btn');
-console.log(btns);
 
 const addToClipboard = async (link) => {
   await navigator.clipboard.writeText(link);

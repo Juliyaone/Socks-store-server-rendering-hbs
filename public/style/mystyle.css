@@ -69,6 +69,24 @@ z-index: 10;
   width: 70%;
   justify-content: space-between;
 }
+.favoritColor {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  z-index: 10;
+}
+
+.favoritPatter {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 2;
+}
+.container-sock {
+  background: url(../img/sock.png);
+  height: 400px;
+  width: 400px;
+}
 
 /* .color-box-1 {
 display: flex;

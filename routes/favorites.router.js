@@ -15,11 +15,13 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/socks?soksId=id', async (req, res) => {
+router.get('/socks', async (req, res) => {
   const { socksId } = req.query;
   try {
-    const favoritesSocks = await CartSock.findByPk(id);
-    res.render('favorites', { favoritesSocks });
+    const favoritesSocks = await CartSock.findOne({ id: socksId, raw: true });
+    console.log(favoritesSocks);
+    const {color, pattern } = favoritesSocks;
+    res.render('copySocks', { color, pattern });
   } catch (error) {
     console.log(error);
   }
