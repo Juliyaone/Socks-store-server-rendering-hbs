@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js --ignore ./sessions"
-
+    "dev": "nodemon app.js --ignore ./sessions",
+    "pusk": "npx sequelize db:create && npx sequelize db:migrate"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Juliyaone/socks-store#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "clipboard": "^2.0.10",
     "cookie-parser": "^1.4.6",
     "express": "^4.17.2",
     "express-session": "^1.17.2",

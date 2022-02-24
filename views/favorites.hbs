@@ -1,0 +1,20 @@
+<script src ="/js/clipboard.min.js"></script>
+<div>
+  {{#each favoritesSocks}}
+  <div class="col-3">
+<div class="card">
+  <img src="{{this.image}}" class="card-img-top" alt="{{this.image}}">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{this.title}}</li>
+    <li class="list-group-item">{{this.description}}</li>
+  </ul>
+ 
+      <button type="button" class="btn btn-outline-primary edit" >Изменить</button>
+       <button type="button" class="btn btn-outline-primary delete">Удалить</button>
+       <button type="button" class="btn btn-outline-primary edit" >Открыть</button>
+  
+</div>
+</div>
+</div>
+  {{/each}}
+</div>
