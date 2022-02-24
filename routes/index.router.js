@@ -1,7 +1,8 @@
 const router = require('express').Router();
 
 router.get('/', async (req, res) => {
-  res.render('index', { username: 'Bob' });
+  const { username } = req.session;
+  res.render('index', { username });
 });
 
 module.exports = router;

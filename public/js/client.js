@@ -72,20 +72,37 @@ const { formGenerator } = document.forms;
 const inputColor = document.getElementById('color');
 const inputPattern = document.getElementById('pattern');
 const favoritesBtn = document.querySelector('.favoritesBtn');
+const cartBtn = document.querySelector('.cartBtn');
 
-favoritesBtn?.addEventListener('click', async () => {
+favoritesBtn?.addEventListener('click', async (event) => {
+  // console.log(data);
+  const databtn = event.target.dataset.namebtn;
   const inputColorValue = inputColor.value;
   const inputPatternValue = inputPattern.value;
   // console.log(inputColorValue);
   const response = await fetch('/generator', {
     method: 'POST',
-    body: JSON.stringify({ inputColorValue, inputPatternValue }),
+    body: JSON.stringify({ inputColorValue, inputPatternValue, databtn }),
     headers: {
       'Content-Type': 'application/json',
     },
   });
   const result = await response.text();
-  console.log(result);
+});
+
+cartBtn?.addEventListener('click', async (event) => {
+  const databtn = event.target.dataset.namebtn;
+  const inputColorValue = inputColor.value;
+  const inputPatternValue = inputPattern.value;
+  // console.log(inputColorValue);
+  const response = await fetch('/generator', {
+    method: 'POST',
+    body: JSON.stringify({ inputColorValue, inputPatternValue, databtn }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const result = await response.text();
 });
 // const formGenerator = document.q
 // document.addCardForm?.addEventListener('submit', async (event) => {
