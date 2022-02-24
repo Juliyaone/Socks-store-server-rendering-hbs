@@ -2,19 +2,18 @@
 <script defer src ="/js/favorites.js"></script>
 <div class="box-favorites"> 
   {{#each favoritesSocks}}
-<div class="card">
-<div><h3>{{this.color}}</h3></div>
-<div><h3>{{this.pattern}}</h3></div>
-{{!-- <button class="copy-btn">Copy link</button> --}}
-<button class="copy-btn" data-text="/favorites/socks?soksId={{this.id}}">Copy link</button>
-</div>
-  
+    <div class="container-favorit">
+        <div class="favoritColor" style="background-color: {{this.color}};">
+          <div class="favoritPatter" style="background: url('../img/patterns/{{this.pattern}}.png');">
+            <div class="container-sock"></div>
+          </div>
+       </div>
+         <button class="copy-btn" data-text="http://localhost:4000/favorites/socks?soksId={{this.id}}">Copy link</button>
+   </div>
   {{/each}}
 </div>
 
 
-
- 
     
 
 

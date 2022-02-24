@@ -3,7 +3,7 @@ const { User } = require('../db/models');
 const { CartSock } = require('../db/models');
 
 // тут обрабатываем запрпос на адрес /cart
-router.get('/cart', async (req, res) => {
+router.get('/', async (req, res) => {
   const { userId } = req.session;
   try {
     const cartSocks = await CartSock.findAll({
