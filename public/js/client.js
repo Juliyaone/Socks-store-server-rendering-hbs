@@ -117,12 +117,12 @@ boxColors?.addEventListener('click', async (event) => {
   boxSock.style.backgroundColor = btnDataColor.btncolor;
 });
 
-// patternBox?.addEventListener('click', async (event) => {
-//   const btnDataPattern = event.target.dataset;
-//   // // console.log(btnDataPattern.btnpattern);
-//   // // console.log(btnDataPattern.btnpattern);
-//   sockPattern.style.background = `url('../img/patterns/${(btnDataPattern.btnpattern)}'`;
-// });
+patternBox?.addEventListener('click', async (event) => {
+  const btnDataPattern = event.target.dataset;
+  // // console.log(btnDataPattern.btnpattern);
+  // // console.log(btnDataPattern.btnpattern);
+  sockPattern.style.background = `url('../img/patterns/${(btnDataPattern.btnpattern)}'`;
+});
 // const formGenerator = document.q
 // document.addCardForm?.addEventListener('submit', async (event) => {
 //   event.preventDefault();
