@@ -14,3 +14,81 @@ img {
   margin: 0;
   padding: 0;
 }
+
+.box-sock {
+position: relative;
+background: url('../img/sock.png');
+width: 395px;
+height: 400px;
+background-color: red;
+border-radius: 10%;
+z-index: 10;
+}
+
+ .sock-pattern {
+  position: absolute;
+  width: 395px;
+  height: 400px; 
+  top: -10px;
+  left: -10px;
+  z-index: 2;
+ }
+
+.box-select-color div {
+  border-radius: 5%;
+  display: flex;
+  width: 140px;
+  height: 100px;
+  border-radius: 10%;
+  }
+
+  .pattern-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+  .pattern-box div {
+    position: relative;
+    border-radius: 5%;
+    height: 100px;
+    width: 140px;
+    border-radius: 10%;
+    z-index: 1;
+    }
+  .pattern-box-1 {
+    background: url('../img/patterns/square.svg')
+  }
+
+.box-select-color {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+/* .color-box-1 {
+display: flex;
+width: 140px;
+height: 100px;
+border-radius: 10%;
+}
+.color-box-2 {
+width: 140px;
+height: 100px;
+}
+.color-box-3 {
+width: 140px;
+height: 100px;
+}
+.color-box-4 {
+width: 140px;
+height: 100px;
+}
+.color-box-5 {
+width: 140px;
+height: 100px;
+}
+.color-box-6 {
+width: 140px;
+height: 100px;
+} */
