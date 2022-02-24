@@ -1,28 +1,33 @@
 const router = require('express').Router();
 const { CartSock } = require('../db/models');
+const { checkIsSession, checkIsNotSession } = require('../middleware');
 // const { User } = require('../db/models');
 
 // тут обрабатываем запрпос на адрес /generator
-router.get('/', (req, res) => {
+router.get('/', checkIsSession, (req, res) => {
   res.render('generator');
 });
 
 router.post('/', async (req, res) => {
-  const { inputColorValue, inputPatternValue } = req.body;
+  const { inputColorValue, inputPatternValue, dataBtn } = req.body;
+  console.log(dataBtn);
   const userId = await req.session.userId;
-  // console.log(id, inputColorValue, inputPatternValue);
-
   try {
-    const newSock = await CartSock.create({
-      userId, color: inputColorValue, pattern: inputPatternValue, isFavorit: true,
-    });
-    res.json(newSock);
+    if (dataBtn) {
+      const newSock = await CartSock.create({
+        userId, color: inputColorValue, pattern: inputPatternValue, isFavorit: true,
+      });
+      res.json(newSock);
+    } else {
+      const newSock = await CartSock.create({
+        userId, color: inputColorValue, pattern: inputPatternValue, inCart: true,
+      });
+      res.json(newSock);
+    }
   } catch (error) {
     console.log(error, 'Не удалось записать в базу данных');
     res.redirect('/generator');
   }
-  // // res.redirect('/generator');
-  // // res.sendStatus(200);
 });
 
 module.exports = router;
