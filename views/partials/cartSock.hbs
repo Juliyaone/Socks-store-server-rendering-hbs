@@ -1,0 +1,12 @@
+
+<div class="box-flex">
+  {{#each modelSock}}
+    <div class="container-cart">
+      <div class="container-sock" style="background: url('../../public/img/sock.png');"> //здесь в стилях фоном привязана
+        <div class="cartColor" style="background-color: {{this.color}};"></div>
+        <div class="cartPatter" style="background: url("{{this.pattern}}");"></div>
+      </div>
+      <button type="button">Копировать ссылку</button>
+    </div>
+{{/each}}
+</div>
