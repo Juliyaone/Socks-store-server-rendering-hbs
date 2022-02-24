@@ -20,7 +20,7 @@ router.get('/socks', async (req, res) => {
   try {
     const favoritesSocks = await CartSock.findOne({ id: socksId, raw: true });
     console.log(favoritesSocks);
-    const {color, pattern } = favoritesSocks;
+    const { color, pattern } = favoritesSocks;
     res.render('copySocks', { color, pattern });
   } catch (error) {
     console.log(error);

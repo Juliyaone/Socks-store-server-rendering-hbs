@@ -1,19 +1,14 @@
-<div>
+<script defer src ="/js/cart.js"></script>
+<div class="box-favorites"> 
   {{#each cartSocks}}
-  <div class="col-3">
-<div class="card">
-  <img src="{{this.image}}" class="card-img-top" alt="{{this.image}}">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">{{this.title}}</li>
-    <li class="list-group-item">{{this.description}}</li>
-  </ul>
- 
-      <button type="button" class="btn btn-outline-primary edit" >Изменить</button>
-       <button type="button" class="btn btn-outline-primary delete">Удалить</button>
-       <button type="button" class="btn btn-outline-primary edit" >Открыть</button>
-  
-</div>
-</div>
-</div>
+    <div class="container-favorit">
+        <div class="favoritColor" style="background-color: {{this.color}};">
+          <div class="favoritPatter" style="background: url('../img/patterns/{{this.pattern}}.png');">
+            <div class="container-sock"></div>
+          </div>
+       </div>
+         <button class="copy-btn" data-text="http://localhost:4000/favorites/socks?soksId={{this.id}}">купить</button>
+   </div>
   {{/each}}
 </div>
+
