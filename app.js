@@ -17,7 +17,7 @@ const loginRouter = require('./routes/login.router');
 const logoutRouter = require('./routes/logout.router');
 const registrationRouter = require('./routes/registration.router');
 const generatorRouter = require('./routes/generator.router');
-// const favoritesRouter = require('./routes/favorites.router');
+const favoritesRouter = require('./routes/favorites.router');
 // const cartRouter = require('./routes/cart.router');
 
 const sessionsConfig = {
@@ -59,7 +59,7 @@ app.use('/registration', registrationRouter);
 app.use('/login', loginRouter);
 app.use('/logout', logoutRouter);
 app.use('/generator', generatorRouter);
-// app.use('/favorites', favoritesRouter);
+app.use('/favorites', favoritesRouter);
 // app.use('/cart', cartRouter);
 
 app.listen(PORT, () => {
