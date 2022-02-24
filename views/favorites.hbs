@@ -1,12 +1,21 @@
-<script src ="/js/clipboard.min.js"></script>
-<script src ="/js/favorites.js"></script>
-<div>
+<script defer src ="/js/clipboard.min.js"></script>
+<script defer src ="/js/favorites.js"></script>
+<div class="box-favorites"> 
   {{#each favoritesSocks}}
-
-<div>color</div>
-<div>pattern</div>
-
-<button class="btn" data-clipboard-text="/favorites/socks?soksId=${{this.id}}">Copy to clipboard</button>
-
+<div class="card">
+<div><h3>{{this.color}}</h3></div>
+<div><h3>{{this.pattern}}</h3></div>
+{{!-- <button class="copy-btn">Copy link</button> --}}
+<button class="copy-btn" data-text="/favorites/socks?soksId={{this.id}}">Copy link</button>
+</div>
+  
   {{/each}}
 </div>
+
+
+
+ 
+    
+
+
+
