@@ -68,6 +68,26 @@ loginFormCl?.addEventListener('submit', async (event) => {
   }
 });
 
+const { formGenerator } = document.forms;
+const inputColor = document.getElementById('color');
+const inputPattern = document.getElementById('pattern');
+const favoritesBtn = document.querySelector('.favoritesBtn');
+
+favoritesBtn?.addEventListener('click', async () => {
+  const inputColorValue = inputColor.value;
+  const inputPatternValue = inputPattern.value;
+  // console.log(inputColorValue);
+  const response = await fetch('/generator', {
+    method: 'POST',
+    body: JSON.stringify({ inputColorValue, inputPatternValue }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const result = await response.text();
+  console.log(result);
+});
+// const formGenerator = document.q
 // document.addCardForm?.addEventListener('submit', async (event) => {
 //   event.preventDefault();
 

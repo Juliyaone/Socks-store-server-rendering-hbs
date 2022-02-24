@@ -16,10 +16,9 @@ const indexRouter = require('./routes/index.router');
 const loginRouter = require('./routes/login.router');
 const logoutRouter = require('./routes/logout.router');
 const registrationRouter = require('./routes/registration.router');
-// const generatorRouter = require('./routes/generator.router');
+const generatorRouter = require('./routes/generator.router');
 // const favoritesRouter = require('./routes/favorites.router');
 // const cartRouter = require('./routes/cart.router');
-
 
 const sessionsConfig = {
   store: new FileStore(), // Создаёт папку sessions, а в ней файл с id сессии и наполнение сессии
@@ -59,7 +58,7 @@ app.use('/', indexRouter);
 app.use('/registration', registrationRouter);
 app.use('/login', loginRouter);
 app.use('/logout', logoutRouter);
-// app.use('/generator', generatorRouter);
+app.use('/generator', generatorRouter);
 // app.use('/favorites', favoritesRouter);
 // app.use('/cart', cartRouter);
 
