@@ -2,10 +2,10 @@
 <div class="box-flex">
   {{#each modelSock}}
     <div class="container-favorit">
-      <div class="container-sock" style="background: url('../../public/img/sock.png');"> //здесь в стилях фоном привязана
-        <div class="favoritColor" style="background-color: {{this.color}};"></div>
-        <div class="favoritPatter" style="background: url("{{this.pattern}}");"></div>
-      </div>
+       //здесь в стилях фоном привязана
+        <div class="favoritColor" style="background-color: {{this.color}};">
+          <div class="favoritPatter" style="background: url("{{this.pattern}}");"><div class="container-sock" style="background: url('../../public/img/sock.png');"></div></div>
+        </div>
       <button type="button">Копировать ссылку</button>
     </div>
 {{/each}}
