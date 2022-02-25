@@ -9,18 +9,29 @@ router.get('/', checkIsSession, (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const { inputColorValue, inputPatternValue, dataBtn } = req.body;
+  const {
+    inputColorValue, inputPatternValue, dataBtn, scale,
+  } = req.body;
   const { userId } = req.session;
-  console.log(dataBtn, userId, inputColorValue);
   try {
     if (dataBtn === 'isFavorite') {
       const newSock = await CartSock.create({
-        userId, color: inputColorValue, pattern: inputPatternValue, inCart: false, isFavorit: true,
+        userId,
+        color: inputColorValue,
+        pattern: inputPatternValue,
+        inCart: false,
+        isFavorit: true,
+        scale,
       });
       res.json(newSock);
     } else {
       const newSock = await CartSock.create({
-        userId, color: inputColorValue, pattern: inputPatternValue, isFavorit: false, inCart: true,
+        userId,
+        color: inputColorValue,
+        pattern: inputPatternValue,
+        isFavorit: false,
+        inCart: true,
+        scale,
       });
       res.json(newSock);
     }

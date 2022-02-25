@@ -1,20 +1,23 @@
 <script defer src ="/js/generator.js"></script>
 <div class="box-select-color">
-  <div data-btncolor="grey" style="background-color: rgb(102, 100, 100);" class="color-box-1"></div>
-  <div data-btncolor="red" style="background-color: rgb(206, 56, 56);" class="color-box-2"></div>
-  <div data-btncolor="green" style="background-color: rgb(38, 189, 50);" class="color-box-3"></div>
-  <div data-btncolor="blue" style="background-color: rgb(46, 62, 211);" class="color-box-4"></div>
-  <div data-btncolor="rgb(190, 48, 159)" style="background-color: rgb(190, 48, 159);" class="color-box-5"></div>
-  <div data-btncolor="yellow" style="background-color: rgb(225, 228, 79);" class="color-box-6"></div>
+  <div data-btncolor="#ff0000" style="background-color: #ff0000;" class="color-box-1"></div>
+  <div data-btncolor="#ffcc00" style="background-color: #ffcc00;" class="color-box-2"></div>
+  <div data-btncolor="#37c871" style="background-color: #37c871;" class="color-box-3"></div>
+  <div data-btncolor="#0066ff" style="background-color: #0066ff" class="color-box-4"></div>
+  <div data-btncolor="#784421" style="background-color: #784421" class="color-box-5"></div>
+  <div data-btncolor="#111111" style="background-color: #111111" class="color-box-6"></div>
 </div>
 <br>
   <div class="pattern-box">
-    <div data-btnpattern="1.png" style="background: url('../img/patterns/1.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-1"></div>
+    <div data-btnpattern="15.svg" style="background: url('../img/patterns/15.svg'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-1"></div>
     <div data-btnpattern="2.png" style="background: url('../img/patterns/2.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-2"></div>
-    <div data-btnpattern="3.png" style="background: url('../img/patterns/3.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-3"></div>
+    <div data-btnpattern="16.svg" style="background: url('../img/patterns/16.svg'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-3"></div>
     <div data-btnpattern="4.png" style="background: url('../img/patterns/4.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-4"></div>
-    <div data-btnpattern="5.png" style="background: url('../img/patterns/5.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-5"></div>
-    <div data-btnpattern="6.png" style="background: url('../img/patterns/6.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;"class="pattern-box-6"></div>
+    <div data-btnpattern="10.svg" style="background: url('../img/patterns/10.svg'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;"class="pattern-box-6"></div>
+    <div data-btnpattern="11.svg" style="background: url('../img/patterns/11.svg'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;"class="pattern-box-6"></div>
+    <div data-btnpattern="12.svg" style="background: url('../img/patterns/12.svg'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;"class="pattern-box-6"></div>
+    <div data-btnpattern="13.svg" style="background: url('../img/patterns/13.svg'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;"class="pattern-box-6"></div>
+    <div data-btnpattern="14.svg" style="background: url('../img/patterns/14.svg'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;"class="pattern-box-6"></div>
   </div>
 <br>
 
@@ -33,7 +36,9 @@
     <label for="pattern">Узор</label>
     <input name="patternName" type="text" id="pattern"> --}}
     <input id="polzun" type="range" min="0.7" max="1.5" value="1" step="0.01">
-    <button id="btnFavorit" class="favoritesBtn" type="button" data-namebtn="isFavorite">Избранное</button>
-    <button id="btnCart" class="cartBtn" type="button" data-namebtn="inCart" >Купить</button>
+    <div class="box-btn-form">
+      <button id="btnFavorit" class="favoritesBtn" type="button" data-namebtn="isFavorite">Избранное</button>
+      <button id="btnCart" class="cartBtn" type="button" data-namebtn="inCart" >Купить</button>
+    </div>
 </form>
 </div>
