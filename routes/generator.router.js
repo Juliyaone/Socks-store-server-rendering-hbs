@@ -13,14 +13,14 @@ router.post('/', async (req, res) => {
   const { userId } = req.session;
   console.log(dataBtn, userId);
   try {
-    if (dataBtn === 'isFavorit') {
+    if (dataBtn === 'isFavorite') {
       const newSock = await CartSock.create({
-        userId, color: inputColorValue, pattern: inputPatternValue, isFavorit: true,
+        userId, color: inputColorValue, pattern: inputPatternValue, inCart: false, isFavorit: true,
       });
       res.json(newSock);
     } else {
       const newSock = await CartSock.create({
-        userId, color: inputColorValue, pattern: inputPatternValue, inCart: true,
+        userId, color: inputColorValue, pattern: inputPatternValue, isFavorit: false, inCart: true,
       });
       res.json(newSock);
     }
