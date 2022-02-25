@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   CartSock.init({
     color: {
       type: DataTypes.STRING,
+      defaultValue: 'white',
     },
     pattern: {
       type: DataTypes.STRING,
