@@ -9,6 +9,7 @@ module.exports = {
       },
       color: {
         type: Sequelize.STRING,
+        defaultValue: 'white',
       },
       pattern: {
         type: Sequelize.STRING,
