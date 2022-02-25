@@ -85,17 +85,19 @@ boxColors?.addEventListener('click', async (event1) => {
   boxSock.style.setProperty('background-color', btnDataColor.btncolor);
 });
 
+//* Добавление узора носку
+patternBox?.addEventListener('click', async (event) => {
+  // const scaleValue = event.target.style.transform;
+  // console.log(event.target);
+  const btnDataPattern = event.target.dataset;
+  sockPattern.style.background = `url('../img/patterns/${(btnDataPattern.btnpattern)}' `;
+});
+
 //* работа с ползунком
 polzunok?.addEventListener('input', async (event2) => {
   const { value } = event2.target;
-  console.log('input');
+  // console.log(event2.target);
   testZoom.style.setProperty('transform', `scale(${value})`);
-});
-
-//* Добавление узора носку
-patternBox?.addEventListener('click', async (event) => {
-  const btnDataPattern = event.target.dataset;
-  sockPattern.style.background = `url('../img/patterns/${(btnDataPattern.btnpattern)}' `;
 });
 
 // const formGenerator = document.q

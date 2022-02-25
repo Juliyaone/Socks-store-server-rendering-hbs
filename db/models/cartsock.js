@@ -18,6 +18,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       defaultValue: 'white',
     },
+    scale: {
+      type: DataTypes.STRING,
+    },
     pattern: {
       type: DataTypes.STRING,
     },

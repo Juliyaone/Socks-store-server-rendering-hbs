@@ -1,6 +1,6 @@
 <script defer src ="/js/generator.js"></script>
 <div class="box-select-color">
-  <div data-btncolor="grey" style="background-color: rgb(102, 100, 100);" class="color-box-1"></div>
+  <div data-btncolor="rgb(151, 151, 151)" style="background-color: rgb(151, 151, 151);" class="color-box-1"></div>
   <div data-btncolor="red" style="background-color: rgb(206, 56, 56);" class="color-box-2"></div>
   <div data-btncolor="green" style="background-color: rgb(38, 189, 50);" class="color-box-3"></div>
   <div data-btncolor="blue" style="background-color: rgb(46, 62, 211);" class="color-box-4"></div>
@@ -17,22 +17,21 @@
     <div data-btnpattern="6.png" style="background: url('../img/patterns/6.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;"class="pattern-box-6"></div>
   </div>
 <br>
-
+{{> alert}}
 <div class="sok-container">
 <div class="box-sock">
-
     <div class="sock-pattern"></div>
     <div class="sapog"></div>
-    
 </div>
 
 <br>
+
 <form class="range-form" name="formGenerator" method="POST" action="/generator">
     {{!-- <label for="color">Цвет</label>
     <input name="colorName" type="text" id="color" data-color="" >
     <label for="pattern">Узор</label>
     <input name="patternName" type="text" id="pattern"> --}}
-    <input id="polzun" type="range" min="0.7" max="1.5" value="1" step="0.01">
+    <input id="polzun" type="range" min="0.8" max="1.5" value="1" step="0.01">
     <button id="btnFavorit" class="favoritesBtn" type="button" data-namebtn="isFavorite">Избранное</button>
     <button id="btnCart" class="cartBtn" type="button" data-namebtn="inCart" >Купить</button>
 </form>

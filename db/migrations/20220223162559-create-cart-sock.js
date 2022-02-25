@@ -8,8 +8,11 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       color: {
-        type: Sequelize.STRING,
         defaultValue: 'white',
+        type: Sequelize.STRING,
+      },
+      scale: {
+        type: Sequelize.STRING,
       },
       pattern: {
         type: Sequelize.STRING,
