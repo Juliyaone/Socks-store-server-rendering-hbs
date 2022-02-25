@@ -1,3 +1,4 @@
+<script defer src ="/js/generator.js"></script>
 <div class="box-select-color">
   <div data-btncolor="grey" style="background-color: rgb(102, 100, 100);" class="color-box-1"></div>
   <div data-btncolor="red" style="background-color: rgb(206, 56, 56);" class="color-box-2"></div>
@@ -8,12 +9,12 @@
 </div>
 <br>
   <div class="pattern-box">
-    <div data-btnpattern="1.png" style="background: url('../img/patterns/1.png')" class="pattern-box-1"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div data-btnpattern="1.png" style="background: url('../img/patterns/1.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-1"></div>
+    <div data-btnpattern="2.png" style="background: url('../img/patterns/2.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-2"></div>
+    <div data-btnpattern="3.png" style="background: url('../img/patterns/3.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-3"></div>
+    <div data-btnpattern="4.png" style="background: url('../img/patterns/4.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-4"></div>
+    <div data-btnpattern="5.png" style="background: url('../img/patterns/5.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;" class="pattern-box-5"></div>
+    <div data-btnpattern="6.png" style="background: url('../img/patterns/6.png'); background-size: contain; background-repeat: no-repeat; background-position:50% 50%;"class="pattern-box-6"></div>
   </div>
 <br>
 {{!-- <div class="box-sock">
@@ -36,6 +37,6 @@
     <label for="pattern">Узор</label>
     <input name="patternName" type="text" id="pattern">
 
-    <button class="favoritesBtn" type="button" data-namebtn="isFavorite">Избранное</button>
-    <button class="cartBtn" type="button" data-namebtn="inCart" >Купить</button>
+    <button id="btnFavorit" class="favoritesBtn" type="button" data-namebtn="isFavorite">Избранное</button>
+    <button id="btnCart" class="cartBtn" type="button" data-namebtn="inCart" >Купить</button>
 </form>
