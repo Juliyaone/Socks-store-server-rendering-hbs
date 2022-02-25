@@ -3,12 +3,13 @@
   {{#each cartSocks}}
     <div class="container-favorit">
         <div class="favoritColor" style="background-color: {{this.color}};">
-          <div class="favoritPatter" style="background: url('../img/patterns/{{this.pattern}}.png');">
+          <div class="favoritPatter" style="background: {{this.pattern}};">
             <div class="container-sock"></div>
           </div>
        </div>
-         <button class="copy-btn" data-text="http://localhost:4000/favorites/socks?soksId={{this.id}}">купить</button>
+         <button class="copy-btn" data-id="{{this.id}}">купить</button>
    </div>
   {{/each}}
 </div>
+
 

@@ -77,38 +77,38 @@ loginFormCl?.addEventListener('submit', async (event) => {
   }
 });
 
-//* Отлавливает клик кнопки отправки в избранное и отправляет данные в бд
-favoritesBtn?.addEventListener('click', async (event) => {
-  // console.log(data);
-  const databtn = event.target.dataset.namebtn;
-  const inputColorValue = inputColor.value;
-  const inputPatternValue = inputPattern.value;
-  // console.log(inputColorValue);
-  const response = await fetch('/generator', {
-    method: 'POST',
-    body: JSON.stringify({ inputColorValue, inputPatternValue, databtn }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-  const result = await response.text();
-});
+// //* Отлавливает клик кнопки отправки в избранное и отправляет данные в бд
+// favoritesBtn?.addEventListener('click', async (event) => {
+//   // console.log(data);
+//   const databtn = event.target.dataset.namebtn;
+//   const inputColorValue = inputColor.value;
+//   const inputPatternValue = inputPattern.value;
+//   // console.log(inputColorValue);
+//   const response = await fetch('/generator', {
+//     method: 'POST',
+//     body: JSON.stringify({ inputColorValue, inputPatternValue, databtn }),
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   });
+//   const result = await response.text();
+// });
 
-//* Отлавливает клик кнопки отправки купить и отправляет данные в бд
-cartBtn?.addEventListener('click', async (event) => {
-  const databtn = event.target.dataset.namebtn;
-  const inputColorValue = inputColor.value;
-  const inputPatternValue = inputPattern.value;
-  // console.log(inputColorValue);
-  const response = await fetch('/generator', {
-    method: 'POST',
-    body: JSON.stringify({ inputColorValue, inputPatternValue, databtn }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-  const result = await response.text();
-});
+// //* Отлавливает клик кнопки отправки купить и отправляет данные в бд
+// cartBtn?.addEventListener('click', async (event) => {
+//   const databtn = event.target.dataset.namebtn;
+//   const inputColorValue = inputColor.value;
+//   const inputPatternValue = inputPattern.value;
+//   // console.log(inputColorValue);
+//   const response = await fetch('/generator', {
+//     method: 'POST',
+//     body: JSON.stringify({ inputColorValue, inputPatternValue, databtn }),
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   });
+//   const result = await response.text();
+// });
 //* Добавление цвета носку
 boxColors?.addEventListener('click', async (event) => {
   const btnDataColor = event.target.dataset;
