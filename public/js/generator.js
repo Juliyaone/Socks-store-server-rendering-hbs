@@ -25,8 +25,11 @@ btnFavorit?.addEventListener('click', async (event) => {
 
 btnCart?.addEventListener('click', async (event) => {
   const dataBtn = event.target.dataset.namebtn;
-  const inputColorValue = document.querySelector('.box-sock').style.backgroundColor;
+  let inputColorValue = document.querySelector('.box-sock').style.backgroundColor;
   let inputPatternValue = document.querySelector('.sock-pattern').style.background;
+  if (!inputColorValue) {
+    inputColorValue = 'white';
+  }
   if (!inputPatternValue) {
     inputPatternValue = 'url("../img/patterns/trans.png)';
   }

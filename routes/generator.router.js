@@ -11,7 +11,7 @@ router.get('/', checkIsSession, (req, res) => {
 router.post('/', async (req, res) => {
   const { inputColorValue, inputPatternValue, dataBtn } = req.body;
   const { userId } = req.session;
-  console.log(dataBtn, userId);
+  console.log(dataBtn, userId, inputColorValue);
   try {
     if (dataBtn === 'isFavorite') {
       const newSock = await CartSock.create({
