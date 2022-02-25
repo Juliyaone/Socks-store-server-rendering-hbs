@@ -1,15 +1,14 @@
-<script defer src ="/js/cart.js"></script>
-<div class="box-favorites"> 
+<script defer src="/js/cart.js"></script>
+<div class="box-favorites">
   {{#each cartSocks}}
-    <div class="container-favorit">
-        <div class="favoritColor" style="background-color: {{this.color}};">
-          <div class="favoritPatter" style="background: {{this.pattern}};">
-            <div class="container-sock"></div>
-          </div>
-       </div>
-         <button class="copy-btn" data-id="{{this.id}}">купить</button>
-   </div>
+  <div class="container-favorit">
+    <div class="favoritColor" style="background-color: {{this.color}};">
+      <div class="favoritPatter" style="background: {{this.pattern}};">
+        <div class="container-sock"></div>
+      </div>
+    </div>
+    <button class="copy-btn" data-buy="{{this.id}}">купить</button>
+    <button class="copy-btn" data-delete="{{this.id}}">удалить</button>
+  </div>
   {{/each}}
 </div>
-
-
