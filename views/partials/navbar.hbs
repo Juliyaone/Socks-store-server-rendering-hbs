@@ -1,16 +1,16 @@
 <nav>
-  <ul>
+  <ul class="nav-list">
    {{#if userId}}
     {{!-- <h4>Привет, {{name}}!</h4> --}}
-    <li><a href="/">Главная</a></li>
-    <li><a href="/favorites">Избранное</a></li>
-    <li><a href="/cart">Корзина</a></li>
-    <li><a href="/logout">Выйти</a></li>
+    <li class="nav-item"><a class="nav-item-link" href="/">Главная</a></li>
+    <li class="nav-item"><a class="nav-item-link" href="/favorites">Избранное</a></li>
+    <li class="nav-item"><a class="nav-item-link" href="/cart">Корзина</a></li>
+    <li class="nav-item"><a class="nav-item-link" href="/logout">Выйти</a></li>
 
     {{else}}
-    <li><a href="/">Главная</a></li>
-    <li><a href="/login">Войти</a></li>
-    <li><a href="/registration">Зарегистрироваться</a></li>
+    <li class="nav-item"><a class="nav-item-link" href="/">Главная</a></li>
+    <li class="nav-item"><a class="nav-item-link" href="/login">Войти</a></li>
+    <li class="nav-item"><a class="nav-item-link" href="/registration">Зарегистрироваться</a></li>
     {{/if}}
   </ul>
 </nav>
